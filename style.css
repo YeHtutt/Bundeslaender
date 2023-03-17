@@ -25,4 +25,41 @@ header{
     width: calc(33.3% - 10px);
     box-sizing: border-box;
     margin: 5px;
+    cursor: pointer;
+}
+
+.card:hover{
+    background-color: ghostwhite;
+    border-color: rgba(131, 120, 120, 0.2);
+}
+
+#letterbox{
+    margin: 5px;
+    margin-top: 10px;
+}
+
+.letters{
+    padding: 10px;
+    height: 30px;
+    width: 30px;
+    background-color: lightgray;
+    cursor: pointer;
+}
+
+.letters:hover{
+    background-color: rgba(131, 120, 120, 0.2);
+}
+
+
+@media(max-width: 800px){ /*Bildschirm-Breite bis max-800px*/
+    .card{ /*Die Klasse vom Card aufrufen - hier Bundesländer Box*/
+        width: calc(50% - 10px); /*nur zwei Boxe*/
+    }
+}
+
+
+@media(max-width: 500px){ /*Bildschirm-Breite bis max-500px*/
+    .card{ /*Die Klasse vom Card aufrufen - hier Bundesländer Box*/
+        width: calc(100% - 10px); /*nur eine Box*/
+    }
 }
