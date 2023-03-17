@@ -1,9 +1,9 @@
 body{
-    margin: 5px;
+    margin: 0;
 }
 
 header{
-    width: cal(100%-10px);
+    width: calc(100%-10px);
     background-color: lightgray;
     font-size: 32px;
     font-weight: bold;
@@ -11,4 +11,18 @@ header{
     border: 1px solid lightgray;
     text-transform: capitalize;
     box-sizing: border-box;
+    margin: 5px;
+}
+
+#content{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.card{
+    border: 10px solid lightgray;
+    padding: 10px;
+    width: calc(33.3% - 10px);
+    box-sizing: border-box;
+    margin: 5px;
 }

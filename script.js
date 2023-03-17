@@ -16,11 +16,15 @@ function render(){
         const bundesland = bundeslaender[i];
         const population = bundesland['population'];
 
-        content.innerHTML += /*html*/`
-        <div class="card"> 
-           <div> ${bundesland['name']} </div>
-           <div> ${population} Millionen </div>
-        </div>
-        `;
+        content.innerHTML += generateBundeslaender(bundesland, population);
     }
+}
+
+function generateBundeslaender(bundesland, population){
+    return /*html*/`
+    <div class="card"> 
+       <div><b> ${bundesland['name']} </b></div>
+       <div> ${(population+'').replace('.',',')} Millionen </div>
+    </div>
+    `;
 }
