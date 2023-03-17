@@ -1,0 +1,14 @@
+body{
+    margin: 5px;
+}
+
+header{
+    width: cal(100%-10px);
+    background-color: lightgray;
+    font-size: 32px;
+    font-weight: bold;
+    padding: 10px;
+    border: 1px solid lightgray;
+    text-transform: capitalize;
+    box-sizing: border-box;
+}

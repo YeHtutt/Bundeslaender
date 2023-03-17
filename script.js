@@ -1,0 +1,26 @@
+let bundeslaender=[];
+let letters=[];
+
+
+async function init(){
+    let response = await fetch('./bundesland.json');
+    bundeslaender = await response.json();
+    render();
+}
+
+function render(){
+    let content = document.getElementById('content');
+    content.innerHTML = '';
+
+    for (let i = 0; i < bundeslaender.length; i++) {
+        const bundesland = bundeslaender[i];
+        const population = bundesland['population'];
+
+        content.innerHTML += /*html*/`
+        <div class="card"> 
+           <div> ${bundesland['name']} </div>
+           <div> ${population} Millionen </div>
+        </div>
+        `;
+    }
+}
